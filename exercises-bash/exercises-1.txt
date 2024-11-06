@@ -1,0 +1,34 @@
+1.
+/bin/bash
+
+2.
+5.2.21
+
+3.
+.bashrc
+
+4.	  inter	login
+	1. yes	no
+	2. yes	yes
+	3. yes	yes
+	4. 
+	5. no	no
+	6. yes	yes
+
+5.
+Handled by capturing SIGINT also interpreted and not executed?
+
+6.
+"echo $DIRSTACK" or "dirs" commands
+
+7.
+default
+
+8.
+"hash" command
+
+9. 
+"ps aux --no-heading | wc -l" prints all process status without heading and wc -l counts lines, 1 process per line
+
+10.
+"echo $HOSTNAME"
