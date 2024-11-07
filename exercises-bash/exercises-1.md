@@ -1,9 +1,14 @@
 # Exercises chapter 1
 ### 1. Where is the **bash** program located on your system?
-`/bin/bash`
+Run `cat /etc/shells` to get a list of all shells.
+Can also run `whereis <command>` to find where command executable is located.
+
+Location: `/bin/bash`
 
 ### 2. Use the **--version** option to find out which version you are running.
-`5.2.21`
+Run `bash --version`
+
+Answer: `5.2.21`
 
 ### 3. Which shell configuration files are read when you login to your system using the graphical user interface and then opening a terminal window?
 `.bashrc`
@@ -29,7 +34,7 @@
         `Interactive and login`
 
 ### 5. Can you explain why **bash** does not exit when you type **Ctrl+C** on the command line?
-`Handled by capturing SIGINT`
+Handled by capturing `Ctrl+C` SIGINT, can use `Ctrl+D` instead to exit.
 
 ### 6. Display directory stack content
 Run `echo $DIRSTACK` or `dirs`
