@@ -49,4 +49,4 @@ Run `hash`
 Run `ps aux --no-heading | wc -l`, prints all proccesses without heading and counts lines
 
 ### 10. How to display the system hostname?
-Run `echo $HOSTNAME`
+Run `echo $HOSTNAME` or just the `hostname` command
