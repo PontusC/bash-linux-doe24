@@ -1,52 +1,18 @@
 # Exercises chapter 1
-### 1. Where is the **bash** program located on your system?
-Run `cat /etc/shells` to get a list of all shells.
-Can also run `whereis <command>` to find where command executable is located.
+### 1. Create 3 variables, VAR1, VAR2 and VAR3; initialize them to hold the values "thirteen", "13" and "Happy Birthday" respectively.
 
-Location: `/bin/bash`
+### 2. Display the values of all three variables.
 
-### 2. Use the **--version** option to find out which version you are running.
-Run `bash --version`
+### 3. Are these local or global variables?
 
-Answer: `5.2.21`
+### 4. Remove VAR3.
 
-### 3. Which shell configuration files are read when you login to your system using the graphical user interface and then opening a terminal window?
-`.bashrc`
+### 5. Can you see the two remaining variables in a new terminal window?
 
-### 4. Are the following shells interactive shells? Are they login shells?
-- 1. A shell opened by clicking on the background of your graphical desktop, selecting "Terminal" or such from a menu.
+### 6. Edit `/etc/profile` so that all users are greeted upon login
 
-        `Interactive but not login`
-- 2. A shell that you get after issuing the command ssh localhost.
+### 7. For the root account, set the prompt to something like "Danger!! root is doing stuff in \w", preferably in a bright color such as red or pink or in reverse video mode.
 
-        `Interactive and login`
-- 3. A shell that you get when logging in to the console in text mode.
+### 8. Make sure that newly created users also get a nice personalized prompt which informs them on which system in which directory they are working. Test your changes by adding a new user and logging in as that user.
 
-        `Interactive and login`
-- 4. A shell obtained by the command xterm &.
-
-        `-`
-- 5. A shell opened by the mysystem.sh script.
-
-        `Not interactive and not login`
-- 6. A shell that you get on a remote host, for which you didn't have to give the login and/or password because you use SSH and maybe SSH keys.
-
-        `Interactive and login`
-
-### 5. Can you explain why **bash** does not exit when you type **Ctrl+C** on the command line?
-Handled by capturing `Ctrl+C` SIGINT, can use `Ctrl+D` instead to exit.
-
-### 6. Display directory stack content
-Run `echo $DIRSTACK` or `dirs`
-
-### 7. If it is not yet the case, set your prompt so that it displays your location in the file system hierarchy
-By default
-
-### 8. Display hashed commands for your current shell session.
-Run `hash`
-
-### 9. How many processes are currently running on your system?
-Run `ps aux --no-heading | wc -l`, prints all proccesses without heading and counts lines
-
-### 10. How to display the system hostname?
-Run `echo $HOSTNAME` or just the `hostname` command
+### 9. Write a script in which you assign two integer values to two variables. The script should calculate the surface of a rectangle which has these proportions. It should be aired with comments and generate elegant output.
