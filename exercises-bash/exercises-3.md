@@ -1,14 +1,14 @@
-# Exercises chapter 1
+# Exercises chapter 3
 ### 1. Create 3 variables, VAR1, VAR2 and VAR3; initialize them to hold the values "thirteen", "13" and "Happy Birthday" respectively.
-Just create in shell with `VAR1="thirteen"` etc...
+Do in shell `VAR1="thirteen"` etc...
 
 ### 2. Display the values of all three variables.
 Do `echo $VAR{1,2,3}`.
 
 ### 3. Are these local or global variables?
-Local, can be seen by doing `printenv | grep VAR` vs `set | grep VAR`. You only find the VAR# variables in set.
+Local, can be seen by doing `printenv | grep VAR` vs `set | grep VAR` or a diff. You only find the `VAR#` variables in set.
 
-Do note that since these are not exported they will not be passed to any child processes of current shell.
+Note that since these are not exported they will not be passed to any child processes of current shell.
 
 ### 4. Remove VAR3.
 Do `unset VAR3`
@@ -26,3 +26,4 @@ Run `sudo su` to get access to `root/.bashrc` and change `PS1`to `PS1="\e[0;35m[
 In `/etc/skel` edit `.bashrc` to make `PS1` fit above. Was default already fixed.
 
 ### 9. Write a script in which you assign two integer values to two variables. The script should calculate the surface of a rectangle which has these proportions. It should be aired with comments and generate elegant output.
+See script `/shell-scripts/ex3-9.sh`

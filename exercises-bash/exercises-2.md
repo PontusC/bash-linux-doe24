@@ -1,2 +1,2 @@
 # Exercises chapter 2
-### 1-6. See script `ex2-1.sh` in `shell-scripts`
+### 1-6. See script `/shell-scripts/ex2-1.sh`
