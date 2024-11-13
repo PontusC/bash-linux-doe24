@@ -19,7 +19,17 @@ Run `find /usr/share/doc -name "*shell*" -type d`
 
 Run `find /usr/share/doc -name "*shell*" -type d -execdir find "{}" "-name" "README" ";" | wc -w`. Finds all directories containing the string `shell` and for every matched directory runs the second find for any file called `README`. Finds 1 file.
 
-### 7. Make a list of files in your home directory that were changed less that 10 hours ago, using grep, but leave out directories.
+### 7. Make a list of files in your home directory that were changed less than 10 hours ago, using grep, but leave out directories.
+Run `ls -lAgG --time-style=+%s | grep -v "^d" | awk -vtenhours=$(date +%s -d "10 hours ago") '$4 > tenhours {print $5}'`
+
+`ls -lAgG --time-style=+%s` Lists almost all (-A) files and directories in a list format (-l) without group or owner (-gG), and formats the time to unix-time. 
+
+`grep -v "^d"` Removes anything that begins with d, which would be directories
+
+`awk -vtenhours=$(date +%s -d "10 hours ago") '$4 > tenhours {print $5}'` Gets input of the format `-rwxrwxrwx link-count block-size unix-time file`
+
+The entire input is stored in `$0`, and the rest is mapped as follows: `$1, $2, $3, $4, $5`
+The awk gets the unix-time for 10 hours ago and checks if any file was changed <10 hours ago, and if so prints that filename.
 
 
 ### 8. Put these commands in a shell script that will generate comprehensible output.
