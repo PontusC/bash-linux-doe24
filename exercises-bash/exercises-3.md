@@ -20,7 +20,7 @@ No
 Add `printf "Hello, $USER\n"` to profile.
 
 ### 7. For the root account, set the prompt to something like "Danger!! root is doing stuff in \w", preferably in a bright color such as red or pink or in reverse video mode.
-Run `sudo su` to get access to `root/.bashrc` and change `PS1`to `PS1="\e[0;35m[Danger! Root is doing stuff in \w]\$\e[m "`
+Run `sudo su` to get access to `/root/.bashrc` and change `PS1`to `PS1="\e[0;35m[Danger! Root is doing stuff in \w]\$\e[m "`
 
 ### 8. Make sure that newly created users also get a nice personalized prompt which informs them on which system in which directory they are working. Test your changes by adding a new user and logging in as that user.
 In `/etc/skel` edit `.bashrc` to make `PS1` fit above. Was default already fixed.
