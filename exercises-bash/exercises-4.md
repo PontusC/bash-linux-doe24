@@ -16,7 +16,7 @@ Run `grep -o localhost /etc/hosts | wc -w` to count occurences of `localhost`.
 Run `find /usr/share/doc -name "*shell*" -type d`
 
 ### 6. How many README files do these subdirectories contain? Don't count anything in the form of `README.a_string`.
-Run `find /usr/share/doc -name "*shell*" -type d -execdir find "{}" "-name" "README" ";" | wc -w`. Finds all directories containing the string `shell` and for every matched directory runs the second find for any file called `README`. Finds 1 file.
+Run `find /usr/share/doc -name "*shell*" -type d -execdir find "{}" "-name" "README" ";" | wc -w`. Finds all directories containing the string `shell` and for every matched directory runs the second find for any file called `README`.
 
 ### 7. Make a list of files in your home directory that were changed less than 10 hours ago, using grep, but leave out directories.
 Run `ls -lAgG --time-style=+%s | grep -v "^d" | awk -vtenhours=$(date +%s -d "10 hours ago") '$4 > tenhours {print $5}'`
