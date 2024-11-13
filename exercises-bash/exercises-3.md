@@ -17,7 +17,7 @@ Do `unset VAR3`
 No
 
 ### 6. Edit `/etc/profile` so that all users are greeted upon login
-Add `printf "Hello, $USER\n"` to profile.
+Add `echo "Hello, $USER"` to profile.
 
 ### 7. For the root account, set the prompt to something like "Danger!! root is doing stuff in \w", preferably in a bright color such as red or pink or in reverse video mode.
 Run `sudo su` to get access to `/root/.bashrc` and change `PS1`to `PS1="\e[0;35m[Danger! Root is doing stuff in \w]\$\e[m "`
