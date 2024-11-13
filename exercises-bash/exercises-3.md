@@ -1,6 +1,6 @@
 # Exercises chapter 3
 ### 1. Create 3 variables, VAR1, VAR2 and VAR3; initialize them to hold the values "thirteen", "13" and "Happy Birthday" respectively.
-Do in shell `VAR1="thirteen"` etc...
+Do in shell `VAR1=thirteen; VAR2=13; VAR3="Happy Birthday"`
 
 ### 2. Display the values of all three variables.
 Do `echo $VAR{1,2,3}`.
