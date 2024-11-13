@@ -9,14 +9,13 @@ Run `grep ^daemon group`.
 Run `grep -v daemon group`.
 
 ### 4. Display localhost information from the `/etc/hosts` file, display the line number(s) matching the search string and count the number of occurrences of the string.
-Run `grep -n localhost hosts` to display localhost information with line numbers.
-Run `grep -o localhost hosts | wc -w` to count occurences of `localhost`.
+Run `grep -n localhost /etc/hosts` to display localhost information with line numbers.
+Run `grep -o localhost /etc/hosts | wc -w` to count occurences of `localhost`.
 
 ### 5. Display a list of `/usr/share/doc` subdirectories containing information about shells.
 Run `find /usr/share/doc -name "*shell*" -type d`
 
 ### 6. How many README files do these subdirectories contain? Don't count anything in the form of `README.a_string`.
-
 Run `find /usr/share/doc -name "*shell*" -type d -execdir find "{}" "-name" "README" ";" | wc -w`. Finds all directories containing the string `shell` and for every matched directory runs the second find for any file called `README`. Finds 1 file.
 
 ### 7. Make a list of files in your home directory that were changed less than 10 hours ago, using grep, but leave out directories.
@@ -31,8 +30,8 @@ Run `ls -lAgG --time-style=+%s | grep -v "^d" | awk -vtenhours=$(date +%s -d "10
 The entire input is stored in `$0`, and the rest is mapped as follows: `$1, $2, $3, $4, $5`
 The awk gets the unix-time for 10 hours ago and checks if any file was changed <10 hours ago, and if so prints that filename.
 
-
 ### 8. Put these commands in a shell script that will generate comprehensible output.
+See `/shell-scripts/ex4-8`
 
 ### 9. Can you find an alternative for `wc -l`, using grep?
 
