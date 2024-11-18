@@ -13,7 +13,7 @@ Run `grep -n localhost /etc/hosts` to display localhost information with line nu
 Run `grep -o localhost /etc/hosts | wc -w` to count occurences of `localhost`.
 
 ### 5. Display a list of `/usr/share/doc` subdirectories containing information about shells.
-Run `find /usr/share/doc -name "*shell*" -type d`
+Run `find /usr/share/doc -name "*sh*" -type d`
 
 ### 6. How many README files do these subdirectories contain? Don't count anything in the form of `README.a_string`.
 Run `find /usr/share/doc -name "*shell*" -type d -execdir find "{}" "-name" "README" ";" | wc -w`. Finds all directories containing the string `shell` and for every matched directory runs the second find for any file called `README`.
@@ -43,4 +43,4 @@ Run `lsblk | grep disk`
 See `/shell-scripts/ex4-11.sh`
 
 ### 12. Display configuration files in `/etc` that contain numbers in their names.
-Run `ls /etc | grep [0-9]` or `ls /etc | grep .*[0-9].*<file extension>` if that is specific.
+Run `ls /etc | grep [0-9]` or `ls /etc | grep .*[0-9].*<file extension>` if that is specified.

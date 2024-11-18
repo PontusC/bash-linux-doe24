@@ -14,6 +14,4 @@ sed -n '/an/p' $TMPFILE
 
 
 echo "These are all lines in '$TMPFILE' containg pattern 'man'"
-#sed -n '/man/i *Inserted before man match*' $TMPFILE 
-
-sed -n '/man/i \*match*' $TMPFILE 
+sed -n -e '/man/i \*match*' -e '/man/p' $TMPFILE    # First inserts *match on pattern, then prints pattern
