@@ -15,7 +15,7 @@ Run `sed -n '/an/p' <file-name>`.
 See `/shell-scripts/ex5-5.sh`.
 
 ### 6. A long listing of the root directory, /, is used for input. Create a file holding sed commands that check for symbolic links and plain files. If a file is a symbolic link, precede it with a line like "--This is a symlink--". If the file is a plain file, add a string on the same line, adding a comment like "<--- this is a plain file".
-See [this]`/shell-scripts/ex5-6.sh`
+See [this](/shell-scripts/ex5-6.sh)
 
 ### 7. Create a script that shows lines containing trailing white spaces from a file. This script should use a sed script and show sensible information to the user
 See `/shell-scripts/ex5-7.sh`
