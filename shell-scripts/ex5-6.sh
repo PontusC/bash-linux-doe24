@@ -6,5 +6,4 @@
 
 OUTPUT="5output"
 
-ls -l / | sed -e '/->/i \--this is a symlink--' -e '/^-/a \<-- this is plain file' > $OUTPUT
-
+ls -l / | sed -e '/ -> /i --this is a symlink--' -e '/^-/s/$/ <-- this is plain file/' > $OUTPUT
