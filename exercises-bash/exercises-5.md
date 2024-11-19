@@ -1,6 +1,6 @@
 # Exercises chapter 5
 ### 1. Print a list of files in your scripts directory, ending in ".sh". Mind that you might have to unalias ls. Put the result in a temporary file
-Run `ls -Al | sed -n '/.*sh/p' > /tmp/sed-temp-1`.
+Run `ls -Al | sed -n '/.*\.sh$/p' > /tmp/sed-temp-1`.
 
 ### 2. Make a list of files in /usr/bin that have the letter "a" as the second character. Put the result in a temporary file.
 Run `find /usr/bin -printf "%f\n" | sed -n '/^.a/p' > /tmp/sed-temp`
