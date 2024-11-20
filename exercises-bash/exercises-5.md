@@ -3,7 +3,7 @@
 Run `ls -Al | sed -n '/.*\.sh$/p' > /tmp/sed-temp-1`.
 
 ### 2. Make a list of files in /usr/bin that have the letter "a" as the second character. Put the result in a temporary file.
-Run `find /usr/bin -printf "%f\n" | sed -n '/^.a/p' > /tmp/sed-temp`
+Run `find /usr/bin -type f -printf "%f\n" | sed -n '/^.a/p' > /tmp/sed-temp`
 
 ### 3. Delete the first 3 lines of each temporary file
 Run `sed -i '1,3d' /tmp/*`.
