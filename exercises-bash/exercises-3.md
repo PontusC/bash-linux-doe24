@@ -26,4 +26,4 @@ Run `sudoedit /root/.bashrc` to get access to `/root/.bashrc` and change `PS1`to
 In `/etc/skel` edit `.bashrc` to make `PS1` fit above. Was default already fixed.
 
 ### 9. Write a script in which you assign two integer values to two variables. The script should calculate the surface of a rectangle which has these proportions. It should be aired with comments and generate elegant output.
-See script `/shell-scripts/ex3-9.sh`
+See script [ex3-9.sh](/shell-scripts/ex3-9.sh)
