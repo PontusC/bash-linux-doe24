@@ -12,4 +12,4 @@ See [ex6-3.awk](/shell-scripts/ex6-3.awk)
 
 Run `awk -f ex6-3.awk test-input/6-3`
 
-Very unclear input in book.
+Very unclear input in book. Made for CSV instead of TSV.

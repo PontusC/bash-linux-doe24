@@ -7,5 +7,9 @@
 # </row>
 # Repeat for all lines in input
 
-BEGIN {FS="\t"}           # Sets separator to :
-{printf $1, $2}
+BEGIN {FS="," ; printf "<exercise6-3>\n"}           # Sets separator to :
+{printf "<row>\n"}
+{printf "<entry>%s</entry>\n",$1}
+{printf "<entry>\n%s\n</entry>\n",$2}
+{printf "</row>\n"}
+END {printf "</exercise6-3>\n"}
