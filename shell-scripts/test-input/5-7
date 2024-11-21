@@ -1,0 +1,12 @@
+this has trailing whitespace  
+this does not
+this has  
+here there is more  
+none
+none here too
+nothing
+trail  
+  
+above was an empty whitespace line and here too  
+there shouldve been 7 total lines found  
+end of matches
