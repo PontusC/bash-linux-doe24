@@ -31,7 +31,7 @@ The entire input is stored in `$0`, and the rest is mapped as follows: `$1, $2, 
 The awk gets the unix-time for 10 hours ago and checks if any file was changed <10 hours ago, and if so prints that filename.
 
 ### 8. Put these commands in a shell script that will generate comprehensible output.
-See `/shell-scripts/ex4-8.sh`
+See [ex4-8.sh](/shell-scripts/ex4-11.sh)
 
 ### 9. Can you find an alternative for `wc -l`, using grep?
 Run `grep -c $'\n' <file>`. Passing `$'\n'` makes Bash deal with the character specially, see bash man page under QUOTING. 
@@ -40,7 +40,7 @@ Run `grep -c $'\n' <file>`. Passing `$'\n'` makes Bash deal with the character s
 Run `lsblk | grep disk`
 
 ### 11. Make a script that checks whether a user exists in `/etc/passwd`. For now, you can specify the user name in the script, you don't have to work with arguments and conditionals at this stage.
-See `/shell-scripts/ex4-11.sh`
+See [ex4-11.sh](/shell-scripts/ex4-11.sh)
 
 ### 12. Display configuration files in `/etc` that contain numbers in their names.
 Run `ls /etc | grep [0-9]` or `ls /etc | grep .*[0-9].*<file extension>` if that is specified.
