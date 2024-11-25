@@ -7,3 +7,4 @@ This repo will contain answers to all exercises in the ["Bash Guide for Beginner
 ### [Chapter 4](/exercises-bash/exercises-4.md)
 ### [Chapter 5](/exercises-bash/exercises-5.md)
 ### [Chapter 6](/exercises-bash/exercises-6.md)
+### [Chapter 7](/exercises-bash/exercises-7.md)
