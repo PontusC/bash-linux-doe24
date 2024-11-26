@@ -17,23 +17,23 @@ elif (( currentMonth == "2"));then
         echo "feb - 29 days";
     fi
 elif (( currentMonth == "3" ));then
-    echo "nov";
+    echo "march - 31 days";
 elif (( currentMonth == "4" ));then
-    echo "nov";
+    echo "april - 30 days";
 elif (( currentMonth == "5" ));then
-    echo "nov";
+    echo "may - 31 days";
 elif (( currentMonth == "6" ));then
-    echo "nov";
+    echo "june - 30 days";
 elif (( currentMonth == "7" ));then
-    echo "nov";
+    echo "july - 31 days";
 elif (( currentMonth == "8" ));then
-    echo "nov";
+    echo "august - 31 days";
 elif (( currentMonth == "9" ));then
-    echo "nov";
+    echo "september - 30 days";
 elif (( currentMonth == "10" ));then
-    echo "nov";
+    echo "october - 31 days";
 elif (( currentMonth == "11" ));then
-    echo "nov";
+    echo "november - 30 days";
 elif (( currentMonth == "12" ));then
-    echo "nov";
+    echo "december - 31 days";
 fi
