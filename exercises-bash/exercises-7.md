@@ -15,6 +15,7 @@ See [ex7-4.sh](/shell-scripts/ex7-4.sh)
 See [whichdaemon.sh](/shell-scripts/whichdaemon.sh)
 
 ### 6. Write a script that makes a backup of your home directory on a remote machine using scp. The script should report in a log file, for instance ~/log/homebackup.log. If you don't have a second machine to copy the backup to, use scp to test copying it to the localhost. This requires SSH keys between the two hosts, or else you have to supply a password. The creation of SSH keys is explained in man ssh-keygen.
+See [ex7-6.sh](/shell-scripts/ex7-6.sh)
 
 ### 7. See book too long.
 
