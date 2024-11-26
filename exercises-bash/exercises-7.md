@@ -1,7 +1,9 @@
 # Exercises chapter 7
 ### 1. Use an if/then/elif/else construct that prints information about the current month. The script should print the number of days in this month, and give information about leap years if the current month is February.
+See [ex7-1.sh](/shell-scripts/ex7-1.sh)
 
 ### 2. Do the same, using a case statement and an alternative use of the date command.
+See [ex7-2.sh](/shell-scripts/ex7-2.sh)
 
 ### 3. Modify /etc/profile so that you get a special greeting message when you connect to your system as root.
 Add `if [ "$(whoami)" == "root" ] ; then echo "you are root" ; fi` in the file.
