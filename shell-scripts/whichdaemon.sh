@@ -22,5 +22,5 @@ fi
 if [[ $(echo $runningDaemons | grep -E "$daemonTwo$") ]];then
     echo "$daemonTwo is active";
 else
-    echo "$daemonOne is inactive";
+    echo "$daemonTwo is inactive";
 fi
