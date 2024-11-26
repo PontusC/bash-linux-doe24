@@ -18,4 +18,6 @@ See [whichdaemon.sh](/shell-scripts/whichdaemon.sh)
 See [ex7-6.sh](/shell-scripts/ex7-6.sh)
 
 ### 7. See book too long.
+See [ex7-7.sh](/shell-scripts/ex7-7.sh)
 
+Not very clear, just made it zip this exercise folder and check if archive already exists.
