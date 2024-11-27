@@ -12,9 +12,9 @@ if (( $currentMonth == "1"));then
     echo "jan - 31 days";
 elif (( currentMonth == "2"));then
     if (( ("$currentYear" % 400) == "0" )) || (( ("$currentYear" % 4 == "0") && ("$currentYear" % 100 != "0") ));then     # Check if leap year
-        echo "feb - 30 days and leap year";
+        echo "feb - 29 days and leap year";
     else
-        echo "feb - 29 days";
+        echo "feb - 30 days";
     fi
 elif (( currentMonth == "3" ));then
     echo "march - 31 days";
