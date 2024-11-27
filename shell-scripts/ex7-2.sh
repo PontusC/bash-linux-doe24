@@ -7,7 +7,6 @@
 # Retrieves relevant information
 currentMonth=$(date +%m)    # month in number 1-12
 currentYear=$(date +%Y)     # year in XXXX format
-currentMonth=$1
 
 case $currentMonth in
     1|3|5|7|8|10|12)
