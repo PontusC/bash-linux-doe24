@@ -6,7 +6,7 @@ See [ex7-1.sh](/shell-scripts/ex7-1.sh)
 See [ex7-2.sh](/shell-scripts/ex7-2.sh)
 
 ### 3. Modify /etc/profile so that you get a special greeting message when you connect to your system as root.
-Add `if [ "$(whoami)" == "root" ] ; then echo "you are root" ; fi` in the file.
+Add `if [ "$(whoami)" == "root" ] ; then echo "you are root" ; fi` to the file.
 
 ### 4. Edit the leaptest.sh script from Section 7.2.4 so that it requires one argument, the year. Test that exactly one argument is supplied.
 See [ex7-4.sh](/shell-scripts/ex7-4.sh)
