@@ -11,5 +11,5 @@ Run `restic init` once after sourcing the config file and making your password.t
 
 Enable it by default with `systemctl enable test.timer`.
 
-Can see the timer after boot using `systemctl list-timers --all`
+Can see the timer after boot using `systemctl list-timers --all`.
 Can test it immediately by running `systemctl daemon-reload` for changes and then `systemctl start restic-backup`
