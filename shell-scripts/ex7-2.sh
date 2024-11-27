@@ -18,9 +18,9 @@ case $currentMonth in
         ;;
     2)
         if (( ("$currentYear" % 400) == "0" )) || (( ("$currentYear" % 4 == "0") && ("$currentYear" % 100 != "0") ));then     # Check if leap year
-            echo "feb - 30 days and leap year";
+            echo "feb - 29 days and leap year";
         else
-            echo "feb - 29 days";
+            echo "feb - 28 days";
         fi
         ;;
 esac
