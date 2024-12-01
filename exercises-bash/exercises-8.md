@@ -11,3 +11,7 @@ See [ex8-2.sh](/shell-scripts/ex8-2.sh)
 See [homebackup.sh](/shell-scripts/homebackup.sh)
 
 ### 4. Write a script called simple-useradd.sh that adds a local user to the system. See book for requested features.
+See [simple-useradd.sh](/shell-scripts/simple-useradd.sh)
+
+### 5. Rewrite the script from Section 7.2.1.4 so that it reads input from the user instead of taking it from the first argument.
+See [ex8-5.sh](/shell-scripts/ex8-5.sh)
