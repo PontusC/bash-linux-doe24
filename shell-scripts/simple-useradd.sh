@@ -45,7 +45,11 @@ echo "$USERNAME:::::::::" >> $SHDW
 
 # Generate directory for new user with correct permissions
 echo "Generating home directory for $USERNAME"
-mkdir -m 750 /home/$USERNAME    # permissions should be 750
+DIR="/home/$USERNAME"
+mkdir -m 750 $DIR    # permissions should be 750
+# Fix owner and grp
+chown $USERNAME:
+
 # There is also mkhomedir_helper  that probably does same as above but better
 
 # Set password default to 1234 for new user, requires sudo i assume
