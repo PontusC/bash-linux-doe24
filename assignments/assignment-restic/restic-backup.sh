@@ -1,5 +1,5 @@
 #!/bin/bash
-LOG="/tmp/restic-log"    # Permission issues if putting under tmp?
+LOG="/tmp/restic-log"
 
 # Source correct config for restic
 source "/home/pc/restic/restic-setup.sh"
