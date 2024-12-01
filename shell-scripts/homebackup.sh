@@ -31,21 +31,22 @@ read -n 1 CHOICE
 echo
 
 # Check if full backup exists
-BACKUP="$TARGET/homebackup-level0.tar"
+BACKUP="$TARGET/homebackup-level0.tar.gz"
 SNAPSHOT_FILE="$TARGET.snar"
 
 if [[ $CHOICE == "f" ]];then      # Choice to generate full backup
     echo "Generating full backup."
-    tar cvpf $BACKUP -g $SNAPSHOT_FILE $SOURCE
+    tar cvpfz $BACKUP -g $SNAPSHOT_FILE $SOURCE
+    echo "Generated full backup at $BACKUP of size $(du -b $BACKUP | cut -f 1)."
     exit 0
 elif [[ ! -f $BACKUP ]];then
     echo "No full backup exists, generating."
-    tar cvpf $BACKUP -g $SNAPSHOT_FILE $SOURCE
+    tar cvpfz $BACKUP -g $SNAPSHOT_FILE $SOURCE
+    echo "Generated full backup at $BACKUP of size $(du -b $BACKUP | cut -f 1)."
     exit 0
 fi
 
 ## Below are all choices for incremental backup
-
 # Checks if backup was modified less than a week ago
 WEEK_IN_SECONDS=604800
 CURRENT_TIME=$(date +%s)
@@ -59,6 +60,8 @@ if [ $(($CURRENT_TIME - $WEEK_IN_SECONDS)) -gt $LAST_UPDATED ];then
 fi
 
 # Generate incremental backup
+BACKUP="$TARGET/incremental.$(date +%s).tar.gz"
 
 echo "Generating incremental backup"
-tar cvpf "$TARGET/incremental.$(date +%s).tar" -g $SNAPSHOT_FILE $SOURCE
+tar cvpfz $BACKUP -g $SNAPSHOT_FILE $SOURCE
+echo "Generated incremental backup at $BACKUP of size $(du -b $BACKUP | cut -f 1)."
