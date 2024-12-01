@@ -32,16 +32,17 @@ echo
 
 # Check if full backup exists
 BACKUP="$TARGET/homebackup-level0.tar.gz"
-SNAPSHOT_FILE="$TARGET.snar"
+SNAPSHOT_FILE="$TARGET/homebackup.snar"
 
 if [[ $CHOICE == "f" ]];then      # Choice to generate full backup
     echo "Generating full backup."
-    tar cvpfz $BACKUP -g $SNAPSHOT_FILE $SOURCE
+    # Make sure tar args end with "f" if using it as arg, else error
+    tar -cvpzf $BACKUP -g $SNAPSHOT_FILE $SOURCE
     echo "Generated full backup at $BACKUP of size $(du -b $BACKUP | cut -f 1)."
     exit 0
 elif [[ ! -f $BACKUP ]];then
     echo "No full backup exists, generating."
-    tar cvpfz $BACKUP -g $SNAPSHOT_FILE $SOURCE
+    tar -cvpzf $BACKUP -g $SNAPSHOT_FILE $SOURCE
     echo "Generated full backup at $BACKUP of size $(du -b $BACKUP | cut -f 1)."
     exit 0
 fi
@@ -63,5 +64,5 @@ fi
 BACKUP="$TARGET/incremental.$(date +%s).tar.gz"
 
 echo "Generating incremental backup"
-tar cvpfz $BACKUP -g $SNAPSHOT_FILE $SOURCE
+tar -cvpzf $BACKUP -g $SNAPSHOT_FILE $SOURCE
 echo "Generated incremental backup at $BACKUP of size $(du -b $BACKUP | cut -f 1)."
