@@ -12,5 +12,7 @@ If you dont double quote it will expand it literally including whitespace. A fil
 See [ex9-4.sh](/shell-scripts/ex9-4.sh), use a counter to check # of loops.
 
 ### 5. Think of a better solution than move -b for the script from Section 9.5.3 to prevent overwriting of existing files. For instance, test whether or not a file exists. Don't do unnecessary work!
+See [ex9-5.sh](/shell-scripts/ex9-5.sh).
 
 ### 6. Rewrite the whichdaemon.sh script from Section 7.2.4. See book for requirements
+See [whichdaemon-2.sh](/shell-scripts/whichdaemon-2.sh).
