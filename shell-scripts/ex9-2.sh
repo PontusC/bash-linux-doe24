@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# This script takes a copy of files in /etc and places at designated target
-# Probably just do a "cp -r $SOURC $TARGET" instead of loop
+# Script takes one input (a directory) and prints five largest files and five most recently modified.
 
 # Check input
 if [ ! $# == 1 ];then
-  echo "Wrong input"
+  echo "Wrong input, requires 1 directory path as argument"
   exit 1
 elif [ ! -d "$1" ];then   # Check if dir
   echo "Input is not directory"
