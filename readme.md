@@ -10,3 +10,4 @@ This repo will contain answers to all exercises in the ["Bash Guide for Beginner
 ### [Chapter 7](/exercises-bash/exercises-7.md)
 ### [Chapter 8](/exercises-bash/exercises-8.md)
 ### [Chapter 9](/exercises-bash/exercises-9.md)
+### [Chapter 10](/exercises-bash/exercises-10.md)
