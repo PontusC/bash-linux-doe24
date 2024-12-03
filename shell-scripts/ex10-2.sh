@@ -1,34 +1,91 @@
 #!/bin/bash
 
-# This script converts all file names containing upper case characters into file# names containing only lower cases.
+# Very basic html website browser
 
-LIST="$(ls)"
+# Setup
+readonly DEFAULT=https://tldp.org/LDP/Bash-Beginners-Guide/html/index.html
+readonly TMP_FILE=TMP_FILE
+readonly HISTORYLIMIT=10
+declare -a HISTORY
 
-for name in $LIST; do
-    if [[ "$name" != *[[:upper:]]* ]]; then
+while true;do
+    # Get input on starting website
+    echo "Enter the URL you would like to load, b to load last site, h to print history, q to quit, or enter for default"
+
+    # Check array index exists
+    if [ ! "${#HISTORY[@]}" == 0 ];then
+        echo "Last site: ${HISTORY[-1]}"
+    fi
+
+    # Get choice
+    read -p 'Choice: ' choice
+    # Check input
+    case $choice in
+        "")
+            SITE=$DEFAULT
+            ;;
+        q)
+            echo "Quitting..."
+            exit 0
+            ;;
+        b)  
+            # Cant access history if nothing visited yet
+            if [ ! "${#HISTORY[@]}" == 0 ];then
+                SITE="${HISTORY[-1]}"
+            else
+                echo "No previously visited URL's, try again"
+                continue
+            fi
+            ;;
+        h)
+            # Cant access history if nothing visited yet
+            if [ ! "${#HISTORY[@]}" == 0 ];then
+                echo "URL history"
+                for hist in "${HISTORY[@]}";do
+                    echo "$hist"
+                done
+            else
+                echo "No previously visited URL's, try again"
+                echo
+            fi
+            echo
+            continue
+            ;;
+        *)
+            SITE="$choice"
+            ;;
+    esac
+
+    echo "Site chosen: $SITE"
+
+    # Download and display starting page
+    # Should probably check that site ends in .html
+
+    # Downloads $SITE and stores locally under $PAGE
+    wget -qO $TMP_FILE $SITE
+
+    if [ ! $? == 0 ];then    # If wget failed
+        echo "Invalid URL entered, try again"
+        echo
+        rm $TMP_FILE # It seems to create empty file even if download fails
         continue
     fi
 
-    ORIG="$name"
-    NEW=`echo $name | tr 'A-Z' 'a-z'`
+    links -dump $TMP_FILE
+    echo
 
-    # Get file extension and base file name
-    EXTENSION="${NEW##*.}"
-    FILENAME="${NEW%.*}"
-    APPEND=0
-
-    # Keep appending an increasing number until that file doesnt exist
-    until [ ! -f $NEW ];do
-        APPEND=$((APPEND+1))
-        # If file has no extension, extension and filename are equal
-        # Dont want to append extension in that case (test would become test-test)
-        if [[ "$FILENAME" == "$EXTENSION" ]];then
-            NEW="$FILENAME-$APPEND"
-        else
-            NEW="$FILENAME-$APPEND.$EXTENSION"
+    # Store successful last 10 urls in history
+    # Only store a new site if you arent going backwards, if going backwards remove last element
+    if [ ! "$choice" == "b" ];then
+        HISTORY+=("$SITE")
+        # If more than HISTORYLIMIT elements stored in history, remove first
+        if [ "${#HISTORY[@]}" -gt "$HISTORYLIMIT" ];then
+            HISTORY=("${HISTORY[@]:1}")
         fi
-    done
+    else
+        unset HISTORY[-1]
+    fi
 
-    mv "$ORIG" "$NEW"
-    echo "new name for $ORIG is $NEW"
+    # Cleanup to prevent duplicate downloads with same name
+    rm $TMP_FILE
 done
