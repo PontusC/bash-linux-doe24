@@ -46,7 +46,6 @@ while true;do
                 done
             else
                 echo "No previously visited URL's, try again"
-                echo
             fi
             echo
             continue
