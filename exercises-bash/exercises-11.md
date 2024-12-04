@@ -10,7 +10,7 @@ Add following to `.bashrc`:
 # Import functions from ~/.bashrc_funcs/ if exists
 if [ -d ~/.bashrc_funcs ]; then
     for file in ~/.bashrc_funcs/*;do
-        [ -f "$file" ] && [[ "$file" = *?.sh ]] && . "$file" # Checks if file and if that file ends in .sh
+        [ -f "$file" ] && [[ "$file" = *.sh ]] && . "$file" # Checks if file and if that file ends in .sh
     done
 fi
 ```
