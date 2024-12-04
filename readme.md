@@ -12,3 +12,4 @@ This repo will contain answers to all exercises in the ["Bash Guide for Beginner
 ### [Chapter 9](/exercises-bash/exercises-9.md)
 ### [Chapter 10](/exercises-bash/exercises-10.md)
 ### [Chapter 11](/exercises-bash/exercises-11.md)
+### [Chapter 12](/exercises-bash/exercises-12.md)
