@@ -12,7 +12,7 @@ elif [ ! -d "$1" ];then   # Check if dir
 fi
 
 echo "Five largest files in: $1"
-ls -lhS "$1" | grep -v -E total.*[0-9]*$ | head -5 | awk 'BEGIN{printf "File\t\t\tSize\n"} {printf "%s\t\t%s\n",$9,$5}'
+ls -lS "$1" | grep -v -E total.*[0-9]*$ | head -5 | awk 'BEGIN{printf "File\t\t\tSize\n"} {printf "%s\t\t%s\n",$9,$5}'
 
 echo
 echo "Five most recently modified files in: $1"
