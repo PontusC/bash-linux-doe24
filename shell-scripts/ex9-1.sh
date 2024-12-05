@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script takes a copy of files in /etc and places at designated target
-# Probably just do a "cp -r $SOURCE $TARGET" instead of loop
+# Probably just do a "cp -a $SOURCE $TARGET" instead of loop
 
 SOURCE=/etc
 TARGET=/home/pc/tests
